@@ -22,9 +22,9 @@ while True:
 
     if hands:
         estado = detector.fingersUp(hands[0])
-        #print(estado)
+        print(estado)
 
-        if estado != estadoAtual and estado == [0,0,0,0,1]:
+        if estado != estadoAtual and estado == [1,1,1,1,1]:
             print('passar slide')
             kb.press(Key.page_down)
             kb.release(Key.page_down)
@@ -34,7 +34,7 @@ while True:
             kb.press(Key.page_up)
             kb.release(Key.page_up)
 
-        if estado == estadoAtual and estado == [0,0,0,0,1]: 
+        if estado == estadoAtual and estado == [1,1,1,1,1]: 
             img[50:216, 984:1230] = setDir
         if estado == estadoAtual and estado == [1,0,0,0,0]: 
             img[50:216, 50:296] = setaEsq
